@@ -1,14 +1,16 @@
-import { performRequest } from "@/lib/datocms";
 
 import { DefaultPageTemplate } from "@/components/template/default-page-template";
 import { PortfolioHeader } from "@/components/layout/portfolio-header";
 import { Wrapper } from "@/components/layout/wrapper";
 
 import { StructuredText } from "react-datocms/structured-text";
+
+import { performRequest } from "@/lib/datocms";
 import { GET_PROJECTS, GET_SINGLE_PROJECT } from "@/graphql/query";
 
-
+//generazione delle pagine dinamiche
 export async function generateStaticParams() {
+
     const data = await performRequest(GET_PROJECTS);
 
     return data.allPortfolios.map(project => ({
@@ -16,7 +18,8 @@ export async function generateStaticParams() {
     }));
 }
 
-export const metadata = async (params) => {
+//generazione dinamica del titolo e della descrizione della pagina
+export const generateMetadata = async ({params}) => {
 
     const { slug } = await params
     const data = await performRequest(GET_SINGLE_PROJECT, { variables: { slug: slug } })
@@ -45,7 +48,7 @@ const PortfolioSinglePage = async ( {params} ) => {
                 excerpt={project.excerpt}
                 cover={project.cover}
                 projectLink={{
-                    url: project.projectLink,
+                    url: project?.projectLink,
                 }}
             />
 
