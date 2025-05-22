@@ -13,7 +13,11 @@ const PortfolioCard = ({isReverse = false, projectName, excerpt, slug, cover}) =
                 </Button>
             </div>
             <div className={`col-span-1 ${isReverse ? `order-1 md:order-1` : `order-1 md:order-2`}`}>
-                <Image src={cover?.src || "/assets/cover.webp"} width={1000} height={1000} alt={cover?.alt || "Progetto"} className="h-full w-full object-cover block rounded shadow-sm" />
+                <Image 
+                    src={cover?.url || "/assets/cover.webp"} 
+                    width={1000} height={1000} 
+                    alt={cover?.alt || "Progetto"} 
+                    className="h-full w-full object-cover block rounded shadow-sm" />
             </div>
         </div>
     )
