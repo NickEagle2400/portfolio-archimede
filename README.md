@@ -1,36 +1,87 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# Portfolio Archimede
 
-First, run the development server:
+Questo repository contiene il codice sorgente del portfolio "Archimede", sviluppato con [Next.js](https://nextjs.org/).  
+Puoi utilizzarlo come base per progetti personali o modificarlo per adattarlo alle tue esigenze.
+
+## 🚀 Requisiti
+
+- Node.js (versione consigliata: 18.x o superiore)
+- npm o yarn
+
+## 📦 Installazione
+
+1. **Clona la repository**
+
+```bash
+git clone https://github.com/NickEagle2400/portfolio-archimede.git
+```
+
+2. **Entra nella cartella del progetto**
+
+```bash
+cd portfolio-archimede
+```
+
+3. **Installa le dipendenze**
+
+Con npm:
+
+```bash
+npm install
+```
+
+Oppure con yarn:
+
+```bash
+yarn install
+```
+
+## 🔧 Variabili d'ambiente
+
+Copia il file `.env.example` e rinominalo in `.env.local`, quindi modifica le variabili secondo le tue configurazioni locali.
+
+```bash
+cp .env.example .env.local
+```
+
+> Assicurati di compilare tutte le variabili necessarie, come eventuali chiavi API o configurazioni CMS.
+
+## 🧑‍💻 Avvio in sviluppo
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Oppure:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```bash
+yarn dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+L'applicazione sarà disponibile su [http://localhost:3000](http://localhost:3000)
 
-## Learn More
+## 🛠️ Build per produzione
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run build
+npm start
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Oppure:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+yarn build
+yarn start
+```
 
-## Deploy on Vercel
+## 📁 Struttura base del progetto
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- `/pages` – Pagine principali del sito
+- `/components` – Componenti riutilizzabili
+- `/styles` – File CSS o Tailwind config
+- `/public` – Asset pubblici
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📝 Licenza
+
+MIT © [NickEagle2400](https://github.com/NickEagle2400)
